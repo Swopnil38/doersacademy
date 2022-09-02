@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doers Academy</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href= "{% static "./favicon.svg" %}" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com"  crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+  
+    <!-- Mobile Specific Metas
+      ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Construction Html5 Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static "assets/plugins/bootstrap/bootstrap.min.css" %}">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="{% static "assets/plugins/slick/slick.css" %}">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="{% static "assets/plugins/themify-icons/themify-icons.css" %}">
+    <!-- animation css -->
+    <link rel="stylesheet" href="{% static "assets/plugins/animate/animate.css" %}">
+    <!-- aos -->
+    <link rel="stylesheet" href="{% static "assets/plugins/aos/aos.css" %}">
+    <!-- venobox popup -->
+    <link rel="stylesheet" href="{% static "assets/plugins/venobox/venobox.css" %}">
+  
+    <!-- Main Stylesheet -->
+    
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"  crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <style>
+        .card {
+          border:none;
+          padding: 10px 50px;
+        }
+    
+        .card::after {
+          position: absolute;
+          z-index: -1;
+          opacity: 0;
+          -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+          transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+    
+        .card:hover {
+    
+    
+          transform: scale(1.02, 1.02);
+          -webkit-transform: scale(1.02, 1.02);
+          backface-visibility: hidden; 
+          will-change: transform;
+          box-shadow: 0 1rem 3rem rgba(0,0,0,.75) !important;
+        }
+    
+        .card:hover::after {
+          opacity: 1;
+        }
+    
+        .card:hover .btn-outline-primary{
+          color:white;
+          background:#007bff;
+        }
+    
+      </style>
+       <link href="{%static "coursesstyles.css" %}" rel="stylesheet">
+      <link rel="stylesheet" href="{% static "./assets/css/style.css" %}">
+      
+      <link href="{% static "coursestyle.css" %}" rel="stylesheet">
+      <link href="{% static "plan.css" %}" rel="stylesheet">
+   
+    <style>
+        body{
+          font-family: sans-serif !important;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    
+  
+    <!--Favicon-->
+    <link rel="shortcut icon" href="{% static "images/favicon.png" %}" type="image/x-icon">
+    <link rel="icon" href="{% static "images/favicon.png" %}" type="image/x-icon">
+  
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <h1>
+        <a href="#" class="logo">Doers Academy</a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="#" class="logo">EduHome</a>
+
+          <button class="nav-close-btn" aria-label="Close menu" data-nav-toggler>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+<!-- 
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#home" class="navbar-link" data-nav-toggler>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#about" class="navbar-link" data-nav-toggler>About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#courses" class="navbar-link" data-nav-toggler>Courses</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#event" class="navbar-link" data-nav-toggler>Event</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-toggler>Blog</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-toggler>Contact</a>
+          </li>
+
+        </ul> -->
+
+      </nav>
+
+      <div class="header-actions">
+
+        
+
+        <a href="/form" class="header-action-btn login-btn">
+          <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+          <span class="span">Enroll Today</span>
+        </a>
+
+        <button class="header-action-btn nav-open-btn" aria-label="Open menu" data-nav-toggler>
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+  <!-- preloader end -->
+
+
+<!-- section --><br><br><br><br>
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 mb-4">
+        <!-- course thumb -->
+        <img src="{% static "./assets/images/courseimgs.jpg" %}" class=img-fluid w-100">
+      </div>
+    </div>
+    <!-- course info -->
+    <!-- <div class="row align-items-center mb-5">
+      <div class="col-xl-3 order-1 col-sm-6 mb-4 mb-xl-0">
+        <h2>Digital Content Masterclass<br>(Visual Addition)</h2>
+      </div>
+      <div class="col-xl-6 order-sm-3 order-xl-2 col-12 order-2">
+        <ul class="list-inline text-xl-center">
+          <li class="list-inline-item mr-4 mb-3 mb-sm-0">
+            <div class="d-flex align-items-center">
+               <i class="ti-timer text-primary icon-md mr-2"></i> 
+              <div class="text-left">
+                <h6 class="mb-0">DURATION</h6>
+                <p class="mb-0">25 Hours<br> Every Alternate Days</p>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item mr-4 mb-3 mb-sm-0">
+            <div class="d-flex align-items-center">
+               <i class="ti-alarm-clock text-primary icon-md mr-2"></i>
+              <div class="text-left">
+                <h6 class="mb-0">TIME</h6>
+                <p class="mb-0">1st Session : 7:30 AM - 9:30 AM<br>2nd Session : 1:30 PM to 3:30 PM</p>
+              </div>
+            </div>
+          </li><br><br>
+          <li class="list-inline-item mr-4 mb-3 mb-sm-0">
+            <div class="d-flex align-items-center">
+               <i class="ti-calendar text-primary icon-md mr-2"></i>
+              <div class="text-left">
+                <h6 class="mb-0">START DATE</h6>
+                <p class="mb-0">11 September onwards<br></p>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item mr-4 mb-3 mb-sm-0">
+            <div class="d-flex align-items-center">
+               <i class="ti-blackboard text-primary icon-md mr-2"></i> 
+              <div class="text-left">                 
+                <h6 class="mb-0">CLASS METHODOLOGY</h6>
+                <p class="mb-0">Physical Classes by<br> Anup Ghimire & Guest Lecturers</p>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+      <div class="col-xl-3 text-sm-right text-left order-sm-2 order-3 order-xl-3 col-sm-6 mb-4 mb-xl-0">
+        <a href="course-single.html" class="btn btn-primary">Apply now</a>
+      </div>
+      <!-- border -->
+      <!-- <div class="col-12 mt-4 order-4">
+        <div class="border-bottom border-primary"></div>
+      </div>
+    </div> -->
+    <!-- course details -->
+    <!-- <div class="row">
+      <div class="col-12 mb-4">
+        <h3>About Course</h3>
+        <p>It is undeniable that content creation is the present and future of this digital age.</p>
+        <p>“Digital Content Masterclass” is designed for you to expand your skill set in the world of digital marketing and content creation. 
+          The right opportunities will be soon coming your ways</p>
+          <p>LET’S GET STARTED!</p>
+          
+      </div>
+      <div class="row justify-content-center">
+        <h3 class="mb-3">Who is this Course For ?</h3>
+        <div class="col-12 px-0">
+
+          <div class="row">
+            <!-- <div class="col-md-6"> -->
+              <!-- <ul class="list-unstyled">
+                
+                <li>STUDENTS</li>
+                <li>ENTREPRENEURS</li>
+                <li>INTRAPRENEURS </li>
+                <li>BUSINESS DEVELOPMENT OFFICERS</li> 
+                <li>DIGITAL MARKETERS</li>
+                  
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-12 mb-4">
+        <h3 class="mb-3">What will I Learn?</h3>
+        <ul class="list-styled">
+          <li><strong>IDENTIFICATION: </strong><br>How to identify content types and forms for any businesses and services to increase its demand and acquire more customers</li>
+          <li><strong>PRODUCTION: </strong> <br>How to identify which form of content is more relevant and contextual? How to approach it? Learning Pre-Production, Production & Post-Production. </li>
+          <li><strong>DISTRIBUTION: </strong><br>Identifying the platforms where the probable audience is based. Identifying the form where your audience consumes the content and finding the right way of distributing your product to these audiences.</li>
+          <li><strong>ACQUISITION: </strong> <br>How to build a funnel to acquire a customer using your content? </li>
+          
+        </ul>
+      </div> -->
+      <!-- <div id="accordion" style="  font-family: var(--ff-urbanist);">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                About Course
+              </button>
+            </h5>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              Digital Content Masterclass” is designed for you to expand your skill set in the world of digital marketing and content creation. 
+              The right opportunities will be soon coming your ways
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Who is this Course For ?
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+            <div class="col-md-6">
+                <ul class="list-styled">
+                  
+                  <li>STUDENTS</li>
+                  <li>ENTREPRENEURS</li>
+                  <li>INTRAPRENEURS </li>
+                  <li>BUSINESS DEVELOPMENT OFFICERS</li> 
+                  <li>DIGITAL MARKETERS</li>
+                    
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                What will I Learn?
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+              <div class="col-12 mb-4">
+                <h3 class="mb-3">What will I Learn?</h3>
+                <ul class="list-styled">
+                  <li><strong>IDENTIFICATION: </strong><br>How to identify content types and forms for any businesses and services to increase its demand and acquire more customers</li>
+                  <li><strong>PRODUCTION: </strong> <br>How to identify which form of content is more relevant and contextual? How to approach it? Learning Pre-Production, Production & Post-Production. </li>
+                  <li><strong>DISTRIBUTION: </strong><br>Identifying the platforms where the probable audience is based. Identifying the form where your audience consumes the content and finding the right way of distributing your product to these audiences.</li>
+                  <li><strong>ACQUISITION: </strong> <br>How to build a funnel to acquire a customer using your content? </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+
+      <div class="courses-details">
+        <h2 class="title" style="font-family: var(--ff-urbanist);"><strong>Digital Content Masterclass(Visual Edition)</strong></h2>
+        
+        
+        <div class="courses-details-tab">
+        
+        <div class="details-tab-menu">
+        <ul class="nav justify-content-center">
+        <li>
+        <button class="active" style="font-family: var(--ff-urbanist);" data-bs-toggle="tab" data-bs-target="#description">
+        Description
+        </button>
+        </li>
+        <li>
+        <button data-bs-toggle="tab" style="font-family: var(--ff-urbanist);"data-bs-target="#curriculum">
+        Who is this Course For
+        </button>
+        </li>
+        <li>
+        <button data-bs-toggle="tab" style="font-family: var(--ff-urbanist);" data-bs-target="#lectures">
+        Curriculum
+        </button>
+        </li>
+        <li>
+        <button data-bs-toggle="tab" style="font-family: var(--ff-urbanist);"data-bs-target="#classdetails">
+        Class Details
+        </button>
+        </li>
+        <li>
+          <button data-bs-toggle="tab" style="font-family: var(--ff-urbanist);"data-bs-target="#learn">
+          What will I Learn?
+          </button>
+          </li>
+        </ul>
+        </div>
+        
+        
+        <div class="details-tab-content">
+        <div class="tab-content">
+        <div class="tab-pane fade show active" id="description">
+        
+        <div class="tab-description">
+        <div class="description-wrapper">
+        <!-- <h3 class="tab-title">Description:</h3> -->
+      <br><br>
+        <p></p><p style="text-align:justify"><strong><span style="font-size:16px; font-family: var(--ff-urbanist);">Digital Content Masterclass(Visual Edition)</span></strong></p>
+        <p style="text-align:justify"><span style="font-size:16px"><span style="font-family: var(--ff-urbanist);">It is undeniable that content creation is the present and future of this digital age.</span></p>
+        <p style="text-align:justify"><span style="font-size:16px; font-family: var(--ff-urbanist);"><strong>"Digital Content Masterclass”</strong> is designed for you to expand your skill set in the world of digital marketing and content creation. The right opportunities will be soon coming your way.</span></p>
+          <p style="text-align:justify"><span style="font-size:18px"><span style="font-family: var(--ff-urbanist);"><strong>LET’S GET STARTED!</strong></span></span></p>
+        <p style="text-align:justify"><br>
+        <span style="font-size:16px"><span style="font-family: var(--ff-urbanist);">Tutor/ Coach/Demonstrator-<br><strong></strong> Mr. Anup Ghimire</strong></span></span></p>
+        <p style="text-align:justify"><span style="font-size:16px"><span style="font-family: var(--ff-urbanist);">MR. Anup Ghimire is an entrepreneur/educator. He has been active in this industry for the past ten years. He is the founder/CEO of Viewfinders Production.</span></span></p>
+   
+        
+     </div>
+        </div>
+        
+        </div>
+        <div class="tab-pane fade show" id="curriculum">
+        
+        <div class="tab-curriculum">
+        <div class="description-wrapper">
+          <br><br>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Students</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Entrepreneurs </span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Intrapreneurs</span></strong></p>
+
+
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Business Development Officers</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Digital Marketer</span></strong></p>
+          <p></p><p></p>
+        </div>
+        </div>
+        
+        </div>
+
+        <div class="tab-pane fade show" id="learn">
+        
+          <div class="tab-curriculum">
+          <div class="description-wrapper">
+            <br><br>
+            <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>You will understand the process of content creation and take active part in it</span></strong></p>
+            <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>You will be able to identify yourself in one vertical of content production </span></strong></p>
+            <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>you will be able to identify different teams needed to produce content</span></strong></p>
+            <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>You will be able to build content strategy</span></strong></p>
+            <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>You will be able to build content distribution strategy</span></strong></p>
+  
+  
+            <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Business Development Officers</span></strong></p>
+            <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i> You will be able to attract customers with content?</span></strong></p>
+            <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>You will be able to turn your passion into business digitally</span></strong></p>
+            <p></p><p></p>
+          </div>
+          </div>
+          
+          </div>
+
+
+        <div class="tab-pane fade show" id="classdetails">
+        
+          <div class="tab-description">
+          <div class="description-wrapper">
+          <!-- <h3 class="tab-title">Description:</h3> -->
+            <br><br>
+          <p style="text-align:justify"><span style="font-size:16px"><span style="font-family: var(--ff-urbanist);"></span><strong>Start Date : </strong>11 September onwards</span></p>
+          <p style="text-align:justify"><span style="font-size:16px"><span style="font-family: var(--ff-urbanist);"><strong>1st Session : </strong> 7:30 AM - 9:30 AM</p>
+            <p style="text-align:justify"><span style="font-size:16px"><span style="font-family: var(--ff-urbanist);"><strong>2nd Session : </strong> 1:30 PM - 3:30 PM</p>
+            <p style="text-align:justify"><span style="font-size:18px"><span style="font-family: var(--ff-urbanist);"><strong>Duration : </strong>Every Alternate Days</span></span></p>
+            <p style="text-align:justify"><span style="font-size:18px"><span style="font-family: var(--ff-urbanist);"><strong>Class Type : </strong>Physical Classes</span></span></p>
+          <p style="text-align:justify"><br>
+          
+       </div>
+          </div>
+          
+          </div>
+          
+        <div class="tab-pane fade" id="lectures">
+        
+        <div class="tab-instructors">
+        <h3 class="tab-title">Curriculum:</h3>
+        <div class="row">
+        <div class="col-md-12 col-12">
+        <div class="courses-video-playlist">
+        <div class="playlist-title">
+        <h3 class="title">Course Content</h3>
+        <span>3 Sections (25 Hr)</span>
+        </div>
+        
+        <div class="video-playlist">
+        <div class="accordion" id="videoPlaylist">
+        
+        <div class="accordion-item">
+        <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1">
+        <p>Section 1  </p>
+        <span class="total-duration">10 Hr</span>
+        </button>
+        <div id="collapse-1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>How to look at any business or entrepreneurship?</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Media's role in today's business</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Customers/Consumers</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Building a Community / Niche</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Digital Presence / Space</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Media Strategy</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>New Media Tools (Introduction)</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Storytelling in Media</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Documentation and creation</span></strong></p>
+          
+
+                                                                                                             
+                                                                                                                         
+        <p>&nbsp;</p>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="accordion" id="videoPlaylist">
+        <div class="accordion-item">
+        <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5">
+        <p>Section 2</p>
+        <span class="total-duration">10 Hr</span>
+        </button>
+        <div id="collapse-5" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>New media formats (introduction)</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Research in Media Communications</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>New Media Tools (Expand)
+          </span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Digital Audio Video Production (Pre-production - production - post-production)</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Crossmedia and Transmedia Storytelling
+          </span></strong></p>
+          <!-- <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Media Strategy</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>New Media Tools (Introduction)</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Storytelling in Media</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Documentation and creation</span></strong></p> -->
+          
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="accordion" id="videoPlaylist">
+        
+        <div class="accordion-item">
+        <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-6">
+        <p>Section 3</p>
+        <span class="total-duration">5 Hr</span>
+        </button>
+        <div id="collapse-6" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+
+        <div class="card-body">
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Content Platforms</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Content types</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Content Distribution</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Integrated Marketing</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Media Strategy</span></strong></p>
+          <p style="text-align:justify"><span style="font-size:20px"><span style="font-family: var(--ff-urbanist);"><i class="ti-angle-double-right text-primary icon-md mr-2"></i>Leadership / Organizational behaviour (Bonus)</span></strong></p>
+          
+        </div>
+        </div>
+        </div>
+        </div>
+        
+        
+        </div>
+        </div>
+        
+        </div>
+        
+        </div>
+        </div>
+        </div>
+
+<br><br>
+<br>
+<br>
+<br>        <div class="container-fluid" style="background: linear-gradient(90deg, #119ae9 0%, #e447dc 100%);">
+        <div class="container p-5">
+          <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card h-100 shadow-lg">
+                <div class="card-body">
+                  <div class="text-center p-3">
+                    <h5 class="card-title">SET 1</h5>
+                    <span class="h1">10 Hours</span>
+                    
+                    
+                  </div>
+                  <br><br>
+                    <span class="h1">Rs.20,000</span>
+                    <br><br>
+                </div>
+                
+                
+                <!-- <div class="card-body text-center">
+                  <button class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card h-100 shadow-lg">
+                <div class="card-body">
+                  <div class="text-center p-3">
+                    <h5 class="card-title">SET 2</h5>
+                    <span class="h2">10 Hours</span>
+                    
+               
+                    
+                  </div>
+                  <br><br>
+                    <span class="h2">Rs.20,000</span>
+                    <br><br>
+                  <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                </div>
+                 <!-- <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                  </svg> New media formats (introduction)</li>
+                  <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                  </svg>Research in Media Communications</li>
+                  <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                  </svg> New Media Tools (Expand)</li>
+                  <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                  </svg> Digital Audio Video Production (Pre-production - production - post-production)</li>
+                  <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                  </svg>Crossmedia and Transmedia Storytelling</li>
+                </ul>  -->
+
+
+
+
+         
+                <!-- <div class="card-body text-center">
+                  <button class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card h-100 shadow-lg">
+                <div class="card-body">
+                  <div class="text-center p-3">
+                    <h5 class="card-title">SET 3</h5>
+                    <span class="h2">5 Hours</span>
+        
+                    
+                  </div>
+                  
+                    <br><br>
+                    <span class="h2">Rs 10,000</span>
+                    <br><br>
+                </div>
+                <!-- <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                  </svg> Cras justo odio</li>
+                  <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                  </svg> Dapibus ac facilisis in</li>
+                  <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                    <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                  </svg> Vestibulum at eros</li>
+                </ul> -->
+                <!-- <div class="card-body text-center">
+                  <button class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</button>
+                </div> -->
+              </div>
+            </div>
+          </div>    
+        </div>
+      </div>    
+    
+      <!-- Option 1: Bootstrap Bundle with Popper -->
+      <script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<br>
+<br>
+<br>
+      <!-- teacher -->
+      <div class="col-12">
+        <h5 class="mb-3">Know Your Instructor</h5>
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+          <div class="media mb-2 mb-sm-0">
+            <img class="mr-4 img-fluid" src="{% static "./assets/images/teacher.jpg" %}" alt="Teacher">
+            <div class="media-body">
+              <h4 class="mt-0">Anup Ghimire</h4>
+              Brand Guy<br>Content Strategist
+            </div>
+          </div>
+          <div class="social-link">
+            <h6 class="d-none d-sm-block">Social Link</h6>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a class="d-inline-block text-light p-1" href="https://www.facebook.com/anup.ghimire44"><i class="ti-facebook"></i></a></li>
+              <li class="list-inline-item"><a class="d-inline-block text-light p-1" href="https://www.linkedin.com/in/anup-ghimire-9366aa5a/" ><i class="ti-linkedin"></i></a></li>
+              <li class="list-inline-item"><a class="d-inline-block text-light p-1" href="https://www.instagram.com/ghimire.anup/" ><i class="ti-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-bottom border-primary mt-4"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /section -->
+
+<footer class="footer">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">Doers Academy</a>
+
+          <p class="section-text">
+            A HANDS-ON APPROACH TO TRANSFER REAL TIME INDUSTRY SKILL SET FOR FUTURE DOERS.
+          </p>
+
+          
+
+        </div>
+
+        <!-- <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Explore</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+              <span class="span">About Us</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+              <span class="span">Upcoming Events</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+              <span class="span">Blog & News</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+              <span class="span">FAQ Question</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+              <span class="span">Testimonial</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+              <span class="span">Privacy Policy</span>
+            </a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Useful Links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+              <span class="span">Contact Us</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+              <span class="span">Pricing Plan</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+              <span class="span">Instructor Profile</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+              <span class="span">FAQ</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+              <span class="span">Popular Courses</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">
+              <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+
+              <span class="span">Terms & Conditions</span>
+            </a>
+          </li>
+
+        </ul> -->
+        <ul class="footer-list"></ul>
+        <ul class="footer-list"></ul>
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Contact Info</p>
+          </li>
+
+          <li class="footer-item">
+            <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+
+            <address class="footer-link">
+              Ekantakuna-Tikabhairab Rd, Lalitpur 44600
+            </address>
+          </li>
+
+          <li class="footer-item">
+            <ion-icon name="call" aria-hidden="true"></ion-icon>
+
+            <a href="tel:+9779851071557" class="footer-link">985-1071557</a>
+          </li>
+
+          <li class="footer-item">
+            <ion-icon name="call" aria-hidden="true"></ion-icon>
+
+            <a href="tel:+9779851071557" class="footer-link">985-1071557</a>
+          </li>
+
+          <li class="footer-item">
+            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+            <a href="mailto:info@doersacademy.com" class="footer-link">info@doersacademy.com</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          Copyright 2022 Doers. All Rights Reserved by <a href="#" class="copyright-link">Doers</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+  <script src="{% static "./assets/js/script.js" %}"></script>
+
+<!-- jQuery -->
+<script src="{% static "./assets/plugins/jQuery/jquery.min.js" %}"></script>
+<!-- Bootstrap JS -->
+<script src="{% static "./assets/plugins/bootstrap/bootstrap.min.js" %}"></script>
+<!-- slick slider -->
+<script src="{% static "./assets/plugins/slick/slick.min.js" %}"></script>
+<!-- aos -->
+<script src="{% static "./assets/plugins/aos/aos.js" %}"></script>
+<!-- venobox popup -->
+<script src="{% static "./assets/plugins/venobox/venobox.min.js" %}"></script>
+<!-- filter -->
+<script src="{% static "./assets/plugins/filterizr/jquery.filterizr.min.js" %}"></script>
+<!-- google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"></script>
+<script src="{% static "./assets/plugins/google-map/gmap.js" %}"></script>
+
+<!-- Main Script -->
+
+
+
+</body>
+</html>

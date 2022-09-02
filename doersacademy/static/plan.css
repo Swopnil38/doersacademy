@@ -1,0 +1,133 @@
+:root {
+    --light: rgb(242, 241, 241);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #dbefff;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.pricing-card {
+    background: linear-gradient(45deg, #37afea 0%, #5583f1 100%);
+    box-shadow: 0 3px 10px rgb(16, 29, 53);
+    width: 25%;
+    max-width: 300px;
+    height: 500px;
+    border-radius: 4px;
+    transition: all 0.3s ease-out;
+}
+
+.pricing-card:nth-child(2) {
+    background: #25262d;
+    margin: 0 2rem;
+    height: 540px;
+}
+
+.pricing-card:hover {
+    transform: scale(1.03);
+}
+
+.pricing-card>div {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    align-items: center;
+    color: var(--light);
+}
+
+.pricing-card>div h3 {
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.pricing-card>div h4 {
+    font-size: 40px;
+}
+
+.pricing-card div p {
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.pricing-card>div ul {
+    margin: 12px 0 32px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing-card>div ul li {
+    margin-bottom: 10px;
+}
+
+svg {
+    width: 60px;
+    margin: 2rem 0;
+}
+
+.btn {
+    padding: 12px 0;
+    cursor: pointer;
+    width: 80%;
+    font-size: 24px;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    transition: border-radius 0.5s;
+}
+
+.btn:hover {
+    border-radius: 0px;
+}
+
+.blue {
+    background-color: #3062d5;
+    color: var(--light);
+}
+
+.primary {
+    background-color: #25262d;
+    color: var(--light);
+}
+
+/*media query*/
+
+@media screen and (max-width:960px) {
+    .pricing-card {
+        width: 30%;
+    }
+    .pricing-card:nth-child(2) {
+        margin: 0 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    section {
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .pricing-card {
+        margin: 1rem 0;
+        width: 50%;
+    }
+}
